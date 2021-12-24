@@ -1,0 +1,14 @@
+
+.li-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: .5rem
+}
+
+.input-item {
+    margin-right: 1rem
+}
