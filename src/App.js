@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import TodoList from "./Todo/TodoList";
 import Context from "./context";
 import Loader from "./Todo/Loader";
+import Modal from "./Modal/Modal";
 
 const AddTodo = React.lazy(() => import("./Todo/AddTodo"));
 
@@ -51,6 +52,7 @@ function App() {
     <Context.Provider value={{ removeTodo }}>
       <div className="wrapper">
         <h1>To-Do List</h1>
+
         <React.Suspense fallback={<p style={{ display: "flex", justifyContent: "center" }}>Loading...</p>}>
           <AddTodo onCreate={addTodo} />
         </React.Suspense>
@@ -61,6 +63,8 @@ function App() {
         ) : loading ? null : (
           <p style={{ display: "flex", justifyContent: "center" }}>No todos!</p>
         )}
+
+        <Modal/>
       </div>
     </Context.Provider>
   );

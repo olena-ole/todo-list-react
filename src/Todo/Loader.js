@@ -1,3 +1,7 @@
 import './loader.css';
 
-export default () => <div className="lds-heart"><div></div></div>;
+function Loader() {
+    return <div className="lds-heart"><div></div></div>;
+} 
+
+export default Loader;
